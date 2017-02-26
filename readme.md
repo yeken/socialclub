@@ -7,7 +7,7 @@ Once server is set, you should have a `local.PROJECTNAME.com` url pointing to yo
 
 #INSTALL REPO
 
-##1) configure your [GitHub account](https://help.github.com/articles/set-up-git/) and [Fork the repo to your own account](https://help.github.com/articles/fork-a-repo/)
+##1) configure your [GitHub account](https://help.github.com/articles/set-up-git/) and [Fork the repo to your own account](https://help.github.com/articles/fork-a-repo/).
 
 ##2) create an `.env` file from `env.example`, update composer by running `composer update` on your root folder and then `php artisan migrate` to migrate the whole DB.
 
@@ -43,6 +43,6 @@ IMPORTANT: Fix all conflicts, if any.
 ```
 git push origin NEW_BRANCH_NAME
 ```
-Will push your code to your *fork*.
+Will push your code to your *fork*. If you get a `remote: Invalid username or password.` read [this article](http://stackoverflow.com/questions/29297154/github-invalid-username-or-password). Basically the repo url should be git@github.com:YOUR_NAME/YOUR_FORK.git and the same with the `upstream` remote.
 
 You then need to [create a pull request](https://help.github.com/articles/about-pull-requests/)
