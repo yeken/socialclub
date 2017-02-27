@@ -1,19 +1,19 @@
-#DEVELOPMENT ENVIRONMENT
+##Development Environment
 Base code is written in [Laravel 5.4](https://laravel.com/docs/5.4/), so whatever your server choice is it must [meet the server requirements](https://laravel.com/docs/5.4#server-requirements) for development.
 We recommend the use of [Homestead vagrant box](https://laravel.com/docs/5.4/homestead), there is good article on how to install it [here](https://scotch.io/tutorials/getting-started-with-laravel-homestead).
 
 Once server is set, you should have a `local.PROJECTNAME.com` url pointing to your Laravel instance. 
 
 
-#INSTALL REPO
+##Install repo
 
-##1) configure your [GitHub account](https://help.github.com/articles/set-up-git/) and [Fork the repo to your own account](https://help.github.com/articles/fork-a-repo/).
+* configure your [GitHub account](https://help.github.com/articles/set-up-git/) and [Fork the repo to your own account](https://help.github.com/articles/fork-a-repo/).
 
-##2) create an `.env` file from `env.example`, update composer by running `composer update` on your root folder and then `php artisan migrate` to migrate the whole DB.
+* create an `.env` file from `env.example`, update composer by running `composer update` on your root folder and then `php artisan migrate` to migrate the whole DB.
 
-##3) You’ll probably need the `public/storage` folder or one of the kind, should download via FTP from staging server or production server.
+* You’ll probably need the `public/storage` folder or one of the kind, should download via FTP from staging server or production server.
 
-#ISSUES FLOW
+##Issues flow
 
 The flow idea is that you work a _branch_ on your *fork* and then make PRs to *original repository* (called _upstream_)
 
@@ -46,3 +46,17 @@ git push origin NEW_BRANCH_NAME
 Will push your code to your *fork*. If you get a `remote: Invalid username or password.` read [this article](http://stackoverflow.com/questions/29297154/github-invalid-username-or-password). Basically the repo url should be git@github.com:YOUR_NAME/YOUR_FORK.git and the same with the `upstream` remote.
 
 You then need to [create a pull request](https://help.github.com/articles/about-pull-requests/)
+
+
+##Version 1.0 contents
+*[Lavel 5.4](https://laravel.com/docs/5.4/releases#laravel-5.4) - Base PHP framework.
+
+*[backpack](https://backpackforlaravel.com/) - CRUD admin interface installed & configured with CRUD and all optionals (File Manager, Backup Manager, Log Manager, Settings, Permissions Manager)
+
+*[DebugBar](https://github.com/barryvdh/laravel-debugbar) - Great development tool, displays stats and data in a footer bar in the browser.
+
+*[Excel](http://www.maatwebsite.nl/laravel-excel/docs) - Extension for handling import/export of excel sheets.
+
+*[CORS](https://github.com/barryvdh/laravel-cors) - _Cross Origin Resource Sharing_  for handling ajax calls from different sites.
+
+*[DomPDF](https://github.com/barryvdh/laravel-dompdf) - Extension for creating PDFs.
